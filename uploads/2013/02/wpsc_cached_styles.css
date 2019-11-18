@@ -1,0 +1,79 @@
+
+		/*
+		* Default View Styling
+		*/
+		div.default_product_display div.textcol{
+			margin-left: 210px !important;
+			min-height: 200px;
+			_height: 200px;
+		}
+
+		div.default_product_display  div.textcol div.imagecol{
+			position:absolute;
+			top:0px;
+			left: 0px;
+			margin-left: -210px !important;
+		}
+
+		div.default_product_display  div.textcol div.imagecol a img {
+			width: 200px;
+			height: 200px;
+		}
+
+		.wpsc_category_grid_item  {
+			display:block;
+			float:left;
+			width: 148px;
+			height: 148px;
+		}
+		.wpsc_category_grid_item  span{
+			position:relative;
+			top:22px;
+		}
+		div.default_product_display div.item_no_image a  {
+			width: 198px;
+		}
+
+		div.default_product_display .imagecol img.no-image, #content div.default_product_display .imagecol img.no-image {
+			width: 200px;
+			height: 200px;
+        }
+
+		
+		/*
+		* Single View Styling
+		*/
+
+		div.single_product_display div.item_no_image  {
+			width: 198px;
+			height: 198px;
+		}
+		div.single_product_display div.item_no_image a  {
+			width: 198px;
+		}
+
+		div.single_product_display div.textcol{
+			margin-left: 210px !important;
+			min-height: 200px;
+			_height: 200px;
+		}
+
+
+		div.single_product_display  div.textcol div.imagecol{
+			position:absolute;
+
+			margin-left: -210px !important;
+		}
+
+		div.single_product_display  div.textcol div.imagecol a img {
+			width: 200px;
+			height: 200px;
+		}
+
+	div#categorydisplay{
+		display: block;
+	}
+
+	div#branddisplay{
+		display: none;
+	}

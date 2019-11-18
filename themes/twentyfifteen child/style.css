@@ -1,0 +1,25 @@
+/*
+ Theme Name:   Twenty Fifteen Child
+ Theme URI:    
+ Description:  Twenty Fifteen Child Theme
+ Author:     
+ Author URI:  
+ Template:     twentyfifteen
+ Version:      1.0.0
+ Tags:         light, one-column, responsive-layout, accessibility-ready
+ Text Domain:  twenty-fifteen-child
+*/	
+
+#main {opacity:0.85;}
+.site-footer .widget {
+  margin: 0;
+  padding: 10% 20% 0;
+}
+.site-footer .widget:last-child {
+  margin-bottom: 10%;
+}	
+
+.site-info{
+display:none;
+}
+h2,h1 {color:#ff887b;}
