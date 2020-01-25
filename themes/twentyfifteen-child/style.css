@@ -1,0 +1,43 @@
+/*
+ Theme Name:        Twentyfifteen Child
+ Theme URI:         https://github.com/rgadon107/garden-of-yoga
+ Description:       The Twenty fifteen child theme extends the parent Twenty Fifteen theme for the Garden of Yoga website.
+ Author:            Robert A. Gadon
+ Author URI:        https://spiralwebdb.com
+ Template:          twentyfifteen
+ Version:           1.0.1
+ Template Version:  2.5
+ License:           GPL-2.0+
+ License URI:       http://www.opensource.org/licenses/gpl-license.php
+ Tags:              light, one-column, responsive-layout, accessibility-ready
+ Text Domain:       twentyfifteen-child
+*/
+
+h1,
+h2  {
+  color: #ff887b; /* web safe color: very light red */
+}
+
+#main {
+  opacity: 0.85;
+}
+
+.site-footer .widget {
+  margin: 0;
+  padding: 10% 20% 0;
+}
+
+.site-footer .widget:last-child {
+  margin-bottom: 10%;
+}
+
+h3.site-footer—title,
+p.content-info > .contact-line:nth-child(odd) { /*.contact-line:nth-child(-n+3)*/
+/*p.content-info > .contact-line:nth-child(2),*/
+/*p.content-info > .contact-line:nth-child(3) {*/
+  text-align: center;
+}
+
+.site-info  {
+  display:none;
+}
