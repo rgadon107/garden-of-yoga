@@ -31,10 +31,7 @@ h2  {
   margin-bottom: 10%;
 }
 
-h3.site-footer—title,
-p.content-info > .contact-line:nth-child(odd) { /*.contact-line:nth-child(-n+3)*/
-/*p.content-info > .contact-line:nth-child(2),*/
-/*p.content-info > .contact-line:nth-child(3) {*/
+#main-content-footer {
   text-align: center;
 }
 
