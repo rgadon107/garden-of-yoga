@@ -69,38 +69,6 @@ function get_theme_dir() {
 	return __DIR__;
 }
 
-/**
- * Loads non-admin child theme files.
- *
- * @since 1.0.0
- * @return void
- */
-function load_nonadmin_files() {
-	$filenames = [
-		'sidebar.php',
-		'footer.php',
-	];
-
-	load_specified_files( $filenames );
-}
-
-/**
- * Load each of the specified files.
- *
- * @since 1.0.1
- *
- * @param array  $filenames
- * @param string $folder_root
- *
- * @return void
- */
-function load_specified_files( array $filenames, $folder_root = '' ) {
-	$folder_root = $folder_root ?: get_theme_dir() . '/';
-
-	foreach ( $filenames as $filename ) {
-		include $folder_root . $filename;
-	}
-}
-
-load_nonadmin_files();
+// Load the sidebar registered to WP by the child theme. 
+include get_theme_dir() . '/register-sidebar.php';
 
