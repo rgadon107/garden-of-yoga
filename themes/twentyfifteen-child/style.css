@@ -18,6 +18,13 @@ h2  {
   color: #ff887b; /* web safe color: very light red */
 }
 
+.secondary a:hover,
+.secondary a:focus  {
+  color: #bb351e; /* web safe color: strong red. */
+  background-color: #f7c937; /* web safe color: bright yellow. */
+  padding-left: 5px;
+}
+
 #main {
   opacity: 0.85;
 }
@@ -29,6 +36,10 @@ h2  {
 
 .site-footer .widget:last-child {
   margin-bottom: 10%;
+}
+
+.site-footer—title > a {
+  color: #ff887b; /* web safe color: very light red */
 }
 
 #main-content-footer {
