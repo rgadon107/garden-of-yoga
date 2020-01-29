@@ -28,13 +28,14 @@
 /plugins/wp-cerber/
 /plugins/wp-migrate-db-pro/
 /plugins/wp-migrate-db-pro-media-files/
+/plugins/wp-migrate-db-pro-theme-plugin-files/
 /plugins/yikes-inc-easy-mailchimp-extender/
 /themes/twentyfifteen/
 /themes/twentytwenty/
 /uploads/backupbuddy_backups/
 /uploads/backupbuddy_temp/
 /uploads/pb_backupbuddy/
-/uploads/securi/
+/uploads/securi/*
 /uploads/wp-cerber-DPZ78Q4JYG0OKS29UF/
 /uploads/wp-migrate-db
 /uploads/.htaccess
