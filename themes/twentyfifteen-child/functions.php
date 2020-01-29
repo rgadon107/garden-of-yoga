@@ -11,19 +11,15 @@
 
 namespace spiralWebDB\gardenOfYoga;
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_child_styles' );
 /**
- * Enqueue scripts and styles.
+ * Get the absolute path to the root directory of the child theme.
  *
- * @since 1.0.1
+ * @since 1.0.0
+ *
+ * @return string returns the directory path.
  */
-function enqueue_child_styles() {
-	$parent_theme_style = 'twentyfifteen-style';
-	$child_theme_style  = 'twentyfifteen-child-style';
-	$file = 'style.css';
-
-    wp_enqueue_style( $parent_theme_style, get_template_directory_uri() . '/style.css', array(), get_parent_theme_version() );
-    wp_enqueue_style( $child_theme_style, get_stylesheet_directory_uri() . '/style.css', array( $parent_theme_style ), _get_asset_version( $file ) );
+function get_theme_dir() {
+	return __DIR__;
 }
 
 /**
@@ -40,7 +36,9 @@ function get_parent_theme_version() {
 		return $version;
 	}
 
-	return $version = wp_get_theme( 'twentyfifteen' )->get( 'Version' );
+	$version = wp_get_theme( 'twentyfifteen' )->get( 'Version' );
+
+	return $version;
 }
 
 /**
@@ -58,16 +56,8 @@ function _get_asset_version( $relative_path ) {
 	return filemtime( get_stylesheet_directory() . '/' . $relative_path );
 }
 
-/**
- * Get the absolute path to the root directory of the child theme.
- *
- * @since 1.0.0
- *
- * @return string returns the directory path.
- */
-function get_theme_dir() {
-	return __DIR__;
-}
+// Load enqueued assets.
+include get_theme_dir() . '/enqueue-assets.php';
 
 // Load the sidebar registered to WP by the child theme. 
 include get_theme_dir() . '/register-sidebar.php';
