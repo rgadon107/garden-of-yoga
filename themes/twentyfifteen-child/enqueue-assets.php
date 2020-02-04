@@ -11,19 +11,22 @@
 
 namespace spiralWebDB\gardenOfYoga;
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_child_styles' );
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_styles_and_scripts' );
 /**
  * Enqueue scripts and styles.
  *
- * @since 1.0.1
+ * @since 1.0.2
  */
-function enqueue_child_styles() {
+function enqueue_styles_and_scripts() {
 	$parent_theme_style = 'twentyfifteen-style';
 	$child_theme_style  = 'twentyfifteen-child-style';
 	$file = 'style.css';
 
 	wp_enqueue_style( $parent_theme_style, get_template_directory_uri() . '/style.css', array(), get_parent_theme_version() );
 	wp_enqueue_style( $child_theme_style, get_stylesheet_directory_uri() . '/style.css', array( $parent_theme_style ), _get_asset_version( $file ) );
+
+	// Remove outdated version of FontAwesome loaded by dpProEventCalendar plugin.
+	wp_dequeue_style( 'font-awesome-original');
 }
 
 /**
@@ -68,19 +71,3 @@ if (! function_exists('fa_custom_setup_kit') ) {
  */
 fa_custom_setup_kit('https://kit.fontawesome.com/e624e31c44.js');
 
-/*************************************************
- * START -- FONT AWESOME SETUP CONFLICT RESOLUTION
- * @see https://fontawesome.com/how-to-use/customizing-wordpress/snippets/setup-conflict-resolution#understand-the-problem
- * @see https://fontawesome.com/how-to-use/on-the-web/other-topics/conflict-detection
- *************************************************/
-// $src (2nd param) in wp_enqueue_style() used by dpProEventCalendar.php
-$hash = md5( 'https://gardenofyoga.local/wp-content/plugins/dpProEventCalendar/css/font-awesome.css');
-// String ($src) converted to md5 hash.
-dump( $hash );
-
-// Note: Add and then run the FA function fa_custom_remove_conflicts().
-// Pass is the md5 hash of the $src param used in the dpProEventCalendar plugin.
-
-/*************************************************
- * END -- FONT AWESOME SETUP CONFLICT RESOLUTION
- *************************************************/
