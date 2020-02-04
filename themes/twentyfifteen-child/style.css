@@ -46,6 +46,10 @@ h2  {
   text-align: center;
 }
 
+.mobile_tel.contact-line {
+  padding: 10px 0 10px;
+}
+
 .site-info  {
   display:none;
 }
